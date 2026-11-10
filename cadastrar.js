@@ -42,3 +42,4 @@ async function cadastrarMusica() {
 
     window.location.href = "index.html"
 }
+
