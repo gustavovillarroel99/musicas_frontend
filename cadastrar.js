@@ -5,6 +5,7 @@ const inputArtista = document.getElementById("artista")
 const inputGenero = document.getElementById("genero")
 const inputAno = document.getElementById("ano")
 const inputDuracao = document.getElementById("duracao")
+
 const botaoCadastrar = document.getElementById("botaoCadastrar")
 
 botaoCadastrar.addEventListener("click", cadastrarMusica)
@@ -37,9 +38,9 @@ async function cadastrarMusica() {
         body: JSON.stringify(musica)
     })
 
-    const dados = await resposta.json()
-    alert(dados.mensagem)
+    const respostaTransformada = await resposta.json()
+
+    alert(respostaTransformada.mensagem)
 
     window.location.href = "index.html"
 }
-
